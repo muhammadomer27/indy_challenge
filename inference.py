@@ -59,6 +59,7 @@ class infer():
         """ Reads the mcap file, detection text file writer and Video writer initialization """
 
         try:
+            self.frameCount = 1
             inputPath = "./input/"+str(inputBag)
             self.outputLoc = "./output/"+str(inputBag).split(".")[0]
             Path(self.outputLoc).mkdir(parents=True,exist_ok=True)
@@ -106,34 +107,35 @@ class infer():
         annotatedFrame = results[0].plot()
 
         detections = []
-
+        
         for result in results:
             for box in result.boxes:
                 name = self.classNames[int(box.cls)]
                 conf, boxes = box.conf.cpu().numpy()[0].tolist(), box.xyxy.cpu().numpy()[0].tolist()
                 detections.append([name, conf, boxes])
-            
+    
         detections = str(detections)    
 
         if view=="front":
             self.frontVideo.write(annotatedFrame)
-            self.frontTxt.write(detections)
+            self.frontTxt.write(detections+ '\n')
         elif view=="rear":
             self.rearVideo.write(annotatedFrame)
-            self.rearTxt.write(detections)
+            self.rearTxt.write(detections+ '\n')
         elif view=="left":
             self.leftVideo.write(annotatedFrame)
-            self.leftTxt.write(detections)
+            self.leftTxt.write(detections+ '\n')
         elif view=="right":
             self.rightVideo.write(annotatedFrame)
-            self.rightTxt.write(detections)
+            self.rightTxt.write(detections+ '\n')
         elif view=="stereo_left":
             self.stereo_leftVideo.write(annotatedFrame)
-            self.stereoLeftTxt.write(detections)
+            self.stereoLeftTxt.write(detections+ '\n')
         elif view=="stereo_right":
             self.stereo_rightVideo.write(annotatedFrame)
-            self.stereoRightTxt.write(detections)
-    
+            self.stereoRightTxt.write(detections+ '\n')
+
+        
 
     def extraction(self):
         """ Extracts camera messages from available topics """
@@ -148,6 +150,7 @@ class infer():
                 msg_type = get_message(self.topicTypeName(topic))
                 msg = deserialize_message(data, msg_type)
                 self.inferandWWrite(msg,view)
+
                 
         self.cleanUp()
     
@@ -162,5 +165,7 @@ if __name__ == "__main__":
         inferObject.loadMcap(str(file).split("/")[1])
         inferObject.extraction()
         del inferObject
+
+
 
 
