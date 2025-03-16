@@ -1,5 +1,12 @@
-input/*
-!input/.gitkeep
+Mcap-Inference-Tester/input/*
+!Mcap-Inference-Tester/input/.gitkeep
 
-output/*
-!output/.gitkeep
+Mcap-Inference-Tester/output/*
+!Mcap-Inference-Tester/output/.gitkeep
+
+Yolo-Trainer/mcap-Files/*
+!Yolo-Trainer/mcap-Files/.gitkeep
+
+Yolo-Trainer/TrainingData/*
+!Yolo-Trainer/TrainingData/.gitkeep
+

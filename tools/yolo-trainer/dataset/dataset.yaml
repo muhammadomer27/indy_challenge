@@ -1,8 +1,0 @@
-path: /home/mcap/labelStudio/yolotrainer/dataset/
-train: images/train
-val: images/val
-test: images/test  # Optional
-
-nc: 2 
-names: ["cars", "truck"]
-

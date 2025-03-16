@@ -1,25 +1,27 @@
-INDY Challenge Vision Models Scripts
+# INDY Autonomous Challenge Vision Models Scripts
 
-# Version 1
-Date : 27-02-2025
+![Indy Autonomous Banner](Images/Banner.png)
 
-Description : This code is for reading the camera topic from a mcap file , infer on it using a YOLO V11 model and get the output bounding box and classes from it. The code also generates an output video with the detections.
+## Version 2
+Date : **16-03-2025**
 
->Note:  The following code waas tested and confirmed to be working on a system with the following specification:
+Description : This repo contains code for:
+
+1. Extracting frames from MCAP files
+2. Randomly selecting **n** number of frames from the extracted frames.
+3. Auto Annotating images to make annotation process faster.
+4. Label Studio format convertor for importing into label studio.
+5. Splitter for splitting final annotated data into Train/Test split.
+6. Yolo training module.
+7. Yolo model validation.
+
+
+⭐ Models are kept in **Models** folder.
+
+>❗❗**Note** : The code in this was tested and confirmed to be working on a system with the following specification:
 > 
 >- OS : Ubuntu 22.04.5 LTS  
 >- GPU :NVIDIA GeForce RTX 3080, 16 GB  
->- Nvidia Driver Version : 550.127.05   
+>- Nvidia Driver Version : 550.127.05
 >- Nvidia Cuda Version : 12.4  
 >- Python : 3.10.12
-
-# Usage Instructions: 
-
-1. Make sure nvidia drivers and cuda are installed.
-2. Setup environment using the requirements file.
-3. Keep the required mcap files in input folder.
-4. Run the python code inference.py
-5. The output video will be generated as mp4 file and the detections are dumped as a list of list into a text file in the output folder. The detections will be dumped into the text file in the following format:
-
-   **[ [class,confidence,[bounding box]] , [class,confidence,[bounding box]] ]**
-
