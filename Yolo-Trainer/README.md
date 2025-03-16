@@ -12,9 +12,10 @@
 
 
 1. Keep your mcap files inside **mcap-Files** folder
+2. 
     ![Mcap Files](../Images/Mcap-Files.png)
 
-2. Run **mcap-Frame-Extract.py** to extract all the frames from mcap files. The  extracted frames will be kept in **Frames** folder.
+3. Run **mcap-Frame-Extract.py** to extract all the frames from mcap files. The  extracted frames will be kept in **Frames** folder.
 
 
 4. Run **image-Selector.py** to select pre-defined no of images from your data or modify it at ***line no 6*** .It'll save the selected images in **selectedImages** folder with random file names.
