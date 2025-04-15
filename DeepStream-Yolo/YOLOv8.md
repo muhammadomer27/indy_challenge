@@ -1,6 +1,6 @@
 # YOLO-V8 Usage
 
-**⭕ Source : https://github.com/marcoslucianops/DeepStream-Yolo**
+**⭕ Source : https://github.com/marcoslucianops/DeepStream-Yolo**  
 
 - [YOLO-V8 Usage](#yolo-v8-usage)
   - [1. ❇️ Env Setup ❇️](#1-️-env-setup-️)
@@ -15,7 +15,7 @@
 ## 1. ❇️ Env Setup ❇️
 
 ```
-git clone https://github.com/ultralytics/ultralytics.git
+git clone --branch v8.3.107 --depth 1 https://github.com/ultralytics/ultralytics.git 
 cd ultralytics
 sudo apt install python3-venv -y
 python3 -m virtualenv ultralyticsenv

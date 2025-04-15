@@ -154,10 +154,8 @@ ii  libnvinfer-bin           8.6.1.6-1+cuda12.0          amd64   TensorRT binari
 pip3 install meson
 pip3 install ninja
 
-git clone https://github.com/GNOME/glib.git
+git clone --branch 2.76.6 --depth 1 https://github.com/GNOME/glib.git
 cd glib
-git checkout <glib-version-branch>
-# e.g. 2.76.6
 meson build --prefix=/usr
 ninja -C build/
 cd build/
