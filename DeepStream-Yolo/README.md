@@ -51,6 +51,8 @@ source ~/.bashrc
   
 - #### ⭕ Method 2 ⭕
 
+Download From : ⏬  **https://developer.download.nvidia.com/compute/cuda/12.2.0/local_installers/cuda_12.2.0_535.54.03_linux.run** 
+
 ```
 wget https://developer.download.nvidia.com/compute/cuda/12.2.0/local_installers/cuda_12.2.0_535.54.03_linux.run
 sudo sh cuda_12.2.0_535.54.03_linux.run
@@ -195,12 +197,12 @@ DeepStreamSDK 7.0.0
 
 ## 2. ❇️ Download the Yolo-V4 `cfg` and `weights` files from [Darknet](https://github.com/AlexeyAB/darknet) repo to the DeepStream-Yolo folder ❇️
 
-weights ⏬ :
+weights ⏬ : **https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights**
 ```
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 ```
 
-cfg ⏬ :
+cfg ⏬ : **https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.cfg**
 ```
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.cfg
 ```
